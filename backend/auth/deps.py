@@ -11,7 +11,7 @@ async def get_current_user(
     username = await get_user(cred.credentials)
     if not username:
         raise HTTPException(
-            401,
-            "UNAUTHORIZED"
+            status_code=401,
+            detail="UNAUTHORIZED"
         )
     return username
