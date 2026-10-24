@@ -1,7 +1,7 @@
 from fastapi import APIRouter, HTTPException, status, Depends
 from pydantic import BaseModel, Field
-from .tokens import issue_token, revoke
 from typing import Annotated
+from .tokens import issue_token, revoke
 from .deps import get_current_user
 
 class RegisterRequest(BaseModel):
